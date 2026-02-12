@@ -1,49 +1,9 @@
-<!-- <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Meeting Agent Setup</title>
-  <script src="https://res.cdn.office.net/teams-js/2.22.0/js/MicrosoftTeams.min.js"></script>
-  <style>
-    body { font-family: "Segoe UI", sans-serif; margin: 0; background: #f3f2f1; }
-    .wrap { padding: 24px; }
-    .card { background: #fff; border-radius: 10px; padding: 20px; }
-    h2 { margin-top: 0; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h2>Meeting Agent</h2>
-      <p>Click Save to add this app to the meeting.</p>
-      <p>After adding, enable meeting transcription in Teams.</p>
-    </div>
-  </div>
-
-  <script>
-    (async function () {
-      await microsoftTeams.app.initialize();
-
-      microsoftTeams.pages.config.registerOnSaveHandler(function (saveEvent) {
-        microsoftTeams.pages.config.setConfig({
-          entityId: "meeting-agent",
-          suggestedDisplayName: "Meeting Agent",
-          contentUrl: window.location.origin + "/api/tabContent",
-          websiteUrl: window.location.origin + "/api/tabContent"
-        });
-        saveEvent.notifySuccess();
-      });
-
-      microsoftTeams.pages.config.setValidityState(true);
-    })();
-  </script>
-</body>
-</html> -->
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meeting Agent Config</title>
   <script src="https://res.cdn.office.net/teams-js/2.22.0/js/MicrosoftTeams.min.js"></script>
 </head>
 <body>
@@ -55,9 +15,10 @@
     microsoftTeams.pages.config.setConfig({
       entityId: "meeting-agent",
       suggestedDisplayName: "Meeting Agent",
-      contentUrl: window.location.origin + "/api/tabContent",
-      websiteUrl: window.location.origin + "/api/tabContent"
+      contentUrl: "https://skp97.github.io/teams-meeting-tab-pages/content.html",
+      websiteUrl: "https://skp97.github.io/teams-meeting-tab-pages/content.html"
     });
+
     saveEvent.notifySuccess();
   });
 
