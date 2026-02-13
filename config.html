@@ -98,7 +98,7 @@
 <body>
   <main class="card">
     <div class="badge">Meeting Setup</div>
-    <h2>Meeting Agent</h2>
+    <h2>EIQ Meeting Agent</h2>
     <p>Click <strong>Save</strong> to add this app to the meeting. After saving, please enable transcription in Teams.</p>
   </main>
 
@@ -109,7 +109,7 @@
   microsoftTeams.pages.config.registerOnSaveHandler(function (saveEvent) {
     microsoftTeams.pages.config.setConfig({
       entityId: "meeting-agent",
-      suggestedDisplayName: "Meeting Agent",
+      suggestedDisplayName: "EIQ Meeting Agent",
       contentUrl: "https://skp97.github.io/teams-meeting-tab-pages/content.html",
       websiteUrl: "https://skp97.github.io/teams-meeting-tab-pages/content.html"
     });
